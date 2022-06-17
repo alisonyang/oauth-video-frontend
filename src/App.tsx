@@ -7,7 +7,7 @@ import "./GlobalStyles.css"
 import { myContext } from './Context'
 function App() {
   const userObject = useContext(myContext);
-  console.log(userObject);
+  // console.log(userObject);
   return (
     <BrowserRouter>
       <NavBar />

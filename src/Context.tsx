@@ -8,9 +8,9 @@ export default function Context(props: any) {
     const [userObject, setUserObject] = useState<any>();
 
     useEffect(() => {
-        axios.get("https://oauth-video-backend.herokuapp.com/getuser", { withCredentials: true }).then((res: AxiosResponse) => {
-        // axios.get("http://localhost:4000/getuser", {withCredentials: true }).then( (res:AxiosResponse) => {
-            console.log(res);
+        // axios.get("https://oauth-video-backend.herokuapp.com/getuser", { withCredentials: true }).then((res: AxiosResponse) => {
+        axios.get("https://localhost:4000/getuser", {withCredentials: true }).then( (res:AxiosResponse) => {
+            console.log("res of get user:", res);
             if (res.data) {
                 setUserObject(res.data);
             }
